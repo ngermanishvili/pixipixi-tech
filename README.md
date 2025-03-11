@@ -48,8 +48,8 @@ A feature-rich React application for exploring and interacting with the Pixabay 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/pixibay-explorer.git
-cd pixibay-explorer
+git clone https://github.com/ngermanishvili/pixipixi-tech.git
+cd pixipixi-tech
 ```
 
 2. Install dependencies:
