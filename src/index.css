@@ -1,0 +1,170 @@
+/* Tailwind CSS v4 დირექტივები */
+@import "tailwindcss";
+
+/* Add this to your index.css */
+.app-theme-light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-tertiary: #6b7280;
+  --border-color: #e5e7eb;
+  --accent-color: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-text: #ffffff;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  /* Apply base styles */
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Dark theme */
+.app-theme-dark {
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --bg-tertiary: #374151;
+  --text-primary: #f9fafb;
+  --text-secondary: #e5e7eb;
+  --text-tertiary: #9ca3af;
+  --border-color: #4b5563;
+  --accent-color: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-text: #ffffff;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+  /* Apply base styles */
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Global styles */
+body {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Common UI elements - map Tailwind classes to custom theme variables */
+/* Cards */
+.app-theme-light .card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.app-theme-dark .card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+/* Headers */
+.app-theme-light .header {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.app-theme-dark .header {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Footer */
+.app-theme-light .footer {
+  background-color: var(--bg-tertiary);
+  color: var(--text-tertiary);
+}
+
+.app-theme-dark .footer {
+  background-color: var(--bg-tertiary);
+  color: var(--text-tertiary);
+}
+
+/* Buttons */
+.app-theme-light .btn-primary {
+  background-color: var(--accent-color);
+  color: var(--accent-text);
+}
+
+.app-theme-dark .btn-primary {
+  background-color: var(--accent-color);
+  color: var(--accent-text);
+}
+
+/* Forms */
+.app-theme-light .input {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.app-theme-dark .input {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Add CSS utilities for all commonly used Tailwind colors */
+/* Backgrounds */
+.app-theme-light .bg-app-white,
+.app-theme-light .bg-white {
+  background-color: var(--bg-primary) !important;
+}
+.app-theme-light .bg-app-gray-50,
+.app-theme-light .bg-gray-50 {
+  background-color: var(--bg-secondary) !important;
+}
+.app-theme-light .bg-app-gray-100,
+.app-theme-light .bg-gray-100 {
+  background-color: var(--bg-tertiary) !important;
+}
+
+.app-theme-dark .bg-app-white,
+.app-theme-dark .bg-white {
+  background-color: var(--bg-secondary) !important;
+}
+.app-theme-dark .bg-app-gray-50,
+.app-theme-dark .bg-gray-50 {
+  background-color: var(--bg-tertiary) !important;
+}
+.app-theme-dark .bg-app-gray-100,
+.app-theme-dark .bg-gray-100 {
+  background-color: var(--bg-tertiary) !important;
+}
+
+/* Text colors */
+.app-theme-light .text-app-gray-900,
+.app-theme-light .text-gray-900 {
+  color: var(--text-primary) !important;
+}
+.app-theme-light .text-app-gray-700,
+.app-theme-light .text-gray-700 {
+  color: var(--text-secondary) !important;
+}
+.app-theme-light .text-app-gray-500,
+.app-theme-light .text-gray-500 {
+  color: var(--text-tertiary) !important;
+}
+
+.app-theme-dark .text-app-gray-900,
+.app-theme-dark .text-gray-900 {
+  color: var(--text-primary) !important;
+}
+.app-theme-dark .text-app-gray-700,
+.app-theme-dark .text-gray-700 {
+  color: var(--text-secondary) !important;
+}
+.app-theme-dark .text-app-gray-500,
+.app-theme-dark .text-gray-500 {
+  color: var(--text-tertiary) !important;
+}
+
+/* Border colors */
+.app-theme-light .border-app-gray-200,
+.app-theme-light .border-gray-200 {
+  border-color: var(--border-color) !important;
+}
+.app-theme-dark .border-app-gray-200,
+.app-theme-dark .border-gray-200 {
+  border-color: var(--border-color) !important;
+}

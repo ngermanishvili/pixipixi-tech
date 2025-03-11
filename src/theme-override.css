@@ -1,0 +1,282 @@
+/* Update these color variables in your theme.css file */
+
+/* Dark theme with matte black/gray colors (no blue tint) */
+.app-theme-dark {
+  --bg-primary: #121212; /* Deep matte black for main background */
+  --bg-secondary: #1e1e1e; /* Slightly lighter black for cards, etc */
+  --bg-tertiary: #2d2d2d; /* Dark gray for inputs, form elements */
+  --text-primary: #f5f5f5; /* Off-white for main text */
+  --text-secondary: #d4d4d4; /* Light gray for secondary text */
+  --text-tertiary: #a0a0a0; /* Medium gray for tertiary text */
+  --border-color: #3d3d3d; /* Dark gray for borders */
+  --accent-color: #3b82f6; /* Keep blue accent for interactive elements */
+  --accent-hover: #60a5fa; /* Lighter blue for hover states */
+  --accent-text: #ffffff; /* White text on accent backgrounds */
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+  /* Apply base styles */
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* You can also add more specific overrides if needed */
+.app-theme-dark .bg-gray-900 {
+  background-color: var(--bg-primary) !important;
+}
+
+.app-theme-dark .bg-gray-800 {
+  background-color: var(--bg-secondary) !important;
+}
+
+.app-theme-dark .bg-gray-700 {
+  background-color: var(--bg-tertiary) !important;
+}
+
+/* Make sure inputs use the matte dark colors */
+.app-theme-dark input,
+.app-theme-dark input[type="text"],
+.app-theme-dark input[type="email"],
+.app-theme-dark input[type="password"],
+.app-theme-dark input[type="number"],
+.app-theme-dark input[type="search"],
+.app-theme-dark textarea,
+.app-theme-dark select {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Specific overrides for any elements that might still have blue tint */
+.app-theme-dark .dark\:bg-gray-900 {
+  background-color: var(--bg-primary) !important;
+}
+
+.app-theme-dark .dark\:bg-gray-800 {
+  background-color: var(--bg-secondary) !important;
+}
+
+.app-theme-dark .dark\:bg-gray-700 {
+  background-color: var(--bg-tertiary) !important;
+}
+/* Global styles */
+body {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Common UI elements - map Tailwind classes to custom theme variables */
+/* Cards */
+.app-theme-light .card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.app-theme-dark .card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+/* Headers */
+.app-theme-light .header {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.app-theme-dark .header {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Footer */
+.app-theme-light .footer {
+  background-color: var(--bg-tertiary);
+  color: var(--text-tertiary);
+}
+
+.app-theme-dark .footer {
+  background-color: var(--bg-tertiary);
+  color: var(--text-tertiary);
+}
+
+/* Buttons */
+.app-theme-light .btn-primary {
+  background-color: var(--accent-color);
+  color: var(--accent-text);
+}
+
+.app-theme-dark .btn-primary {
+  background-color: var(--accent-color);
+  color: var(--accent-text);
+}
+
+/* Forms */
+.app-theme-light .input {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.app-theme-dark .input {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Add CSS utilities for all commonly used Tailwind colors */
+/* Backgrounds */
+.app-theme-light .bg-app-white,
+.app-theme-light .bg-white {
+  background-color: var(--bg-primary) !important;
+}
+.app-theme-light .bg-app-gray-50,
+.app-theme-light .bg-gray-50 {
+  background-color: var(--bg-secondary) !important;
+}
+.app-theme-light .bg-app-gray-100,
+.app-theme-light .bg-gray-100 {
+  background-color: var(--bg-tertiary) !important;
+}
+
+.app-theme-dark .bg-app-white,
+.app-theme-dark .bg-white {
+  background-color: var(--bg-secondary) !important;
+}
+.app-theme-dark .bg-app-gray-50,
+.app-theme-dark .bg-gray-50 {
+  background-color: var(--bg-tertiary) !important;
+}
+.app-theme-dark .bg-app-gray-100,
+.app-theme-dark .bg-gray-100 {
+  background-color: var(--bg-tertiary) !important;
+}
+
+/* Text colors */
+.app-theme-light .text-app-gray-900,
+.app-theme-light .text-gray-900 {
+  color: var(--text-primary) !important;
+}
+.app-theme-light .text-app-gray-700,
+.app-theme-light .text-gray-700 {
+  color: var(--text-secondary) !important;
+}
+.app-theme-light .text-app-gray-500,
+.app-theme-light .text-gray-500 {
+  color: var(--text-tertiary) !important;
+}
+
+.app-theme-dark .text-app-gray-900,
+.app-theme-dark .text-gray-900 {
+  color: var(--text-primary) !important;
+}
+.app-theme-dark .text-app-gray-700,
+.app-theme-dark .text-gray-700 {
+  color: var(--text-secondary) !important;
+}
+.app-theme-dark .text-app-gray-500,
+.app-theme-dark .text-gray-500 {
+  color: var(--text-tertiary) !important;
+}
+
+/* Border colors */
+.app-theme-light .border-app-gray-200,
+.app-theme-light .border-gray-200 {
+  border-color: var(--border-color) !important;
+}
+.app-theme-dark .border-app-gray-200,
+.app-theme-dark .border-gray-200 {
+  border-color: var(--border-color) !important;
+}
+
+/* Add these specific input styles to your theme.css file */
+
+/* Input fields - explicit selectors with high specificity */
+.app-theme-light input,
+.app-theme-light input[type="text"],
+.app-theme-light input[type="email"],
+.app-theme-light input[type="password"],
+.app-theme-light input[type="number"],
+.app-theme-light input[type="search"],
+.app-theme-light textarea,
+.app-theme-light select {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.app-theme-dark input,
+.app-theme-dark input[type="text"],
+.app-theme-dark input[type="email"],
+.app-theme-dark input[type="password"],
+.app-theme-dark input[type="number"],
+.app-theme-dark input[type="search"],
+.app-theme-dark textarea,
+.app-theme-dark select {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Input placeholders */
+.app-theme-light input::placeholder,
+.app-theme-light textarea::placeholder {
+  color: var(--text-tertiary) !important;
+}
+
+.app-theme-dark input::placeholder,
+.app-theme-dark textarea::placeholder {
+  color: var(--text-tertiary) !important;
+}
+
+/* Focus states */
+.app-theme-light input:focus,
+.app-theme-light textarea:focus,
+.app-theme-light select:focus {
+  border-color: var(--accent-color) !important;
+  outline-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 1px var(--accent-color) !important;
+}
+
+.app-theme-dark input:focus,
+.app-theme-dark textarea:focus,
+.app-theme-dark select:focus {
+  border-color: var(--accent-color) !important;
+  outline-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 1px var(--accent-color) !important;
+}
+
+/* Target specific Tailwind classes that might be used for inputs */
+.app-theme-light .bg-white,
+.app-theme-light .bg-gray-50,
+.app-theme-light .bg-gray-100 {
+  background-color: var(--bg-primary) !important;
+}
+
+.app-theme-dark .bg-white,
+.app-theme-dark .bg-gray-50,
+.app-theme-dark .bg-gray-100 {
+  background-color: var(--bg-tertiary) !important;
+}
+
+/* Special case for your custom Input component */
+/* Looking at your code, your Input component likely has specific Tailwind classes */
+.app-theme-light .input-field,
+.app-theme-light div[class*="input-field"] {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.app-theme-dark .input-field,
+.app-theme-dark div[class*="input-field"] {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* If you're using React Hook Form, target those specific elements too */
+.app-theme-dark .react-hook-form-input,
+.app-theme-dark [data-testid*="input"] {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+}
